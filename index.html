@@ -1,47 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiraro</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sneakers</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <p>Sneakers</p>
-        <nav>
-            <ul>
-                <li><a href="">Collections</a></li>
-                <li><a href="">Men</a></li>
-                <li><a href="">Women</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-            </ul>
-        </nav>
-       <i class="fa-solid fa-cart-shopping"></i>
-    </header>
-    <main>
-        <div>
+<header >
+<div class="navbar">
+   <div class="logo">
+        <img src="logo.svg" alt="sneakers logo">
+    </div>
+    <nav id="navMenu">
+        <a href="#">Collections</a>
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="icons">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <img src="image-avatar.png" class="avatar">
+    </div>
+    <div class="menu-btn" onclick="toggleMenu()">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+</div>
+<div class="container">
 
-            <div>
-                <img src="" alt="">
+    <!-- PARTIE IMAGE -->
+    <div class="left">
+
+        <div class="main-img">
+            <img id="mainImage" src="image-product-1.jpg">
+        </div>
+        <div class="thumbs">
+            <div class="thumb">
+                <img src="image-product-1.jpg" onclick="changeImage(this)">
             </div>
-            <div>
-                <img src="Capture d'écran 2026-03-05 143754.png" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
+
+            <div class="thumb">
+                <img src="image-product-2.jpg" onclick="changeImage(this)">
             </div>
+
+            <div class="thumb">
+                <img src="image-product-3-thumbnail.jpg" onclick="changeImage(this)">
+            </div>
+
+            <div class="thumb">
+                <img src="image-product-4-thumbnail.jpg" onclick="changeImage(this)">
+            </div>
+
         </div>
 
-        <div>
-            <p>Sneaker company</p>
-            <h1>Fall Limited Edition Sneakers</h1>
-            <p>These low-profile sneakers are your perfect casuak wear companion.Featuring a durable rubber outer sole
-                ,they'll withstand everything the weather can offer.
-            </p>
+    </div>
+
+
+    <!-- PARTIE TEXTE -->
+    <div class="right">
+
+        <div class="company">SNEAKER COMPANY</div>
+
+        <div class="title">
+            Fall Limited Edition Sneakers
         </div>
-    </main>
+
+        <div class="description">
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they'll withstand everything
+        the weather can offer.
+        </div>
+        <div class="price-row">
+            <div class="price">$125.00</div>
+            <div class="discount">50%</div>
+        </div>
+        <div class="old-price">$250.00</div>
+        <div class="cart-row">
+            <div class="quantity">
+                <div class="btn" onclick="decrease()">-</div>
+                <div id="qty">0</div>
+                <div class="btn" onclick="increase()">+</div>
+            </div>
+            <div class="add-cart">
+            🛒 Add to cart
+            </div>
+        </div>
+    </div>
+</div>
+</header>
+<script src="index.js"></script>
 </body>
 </html>
